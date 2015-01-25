@@ -18,5 +18,11 @@
         "psr-4": { "Kalnoy\\Cruddy\\Ace\\": "src/" }
     },
 
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+
+    "extra": {
+        "branch-alias": {
+            "dev-master": "v0.5.x-dev"
+        }
+    }
 }
