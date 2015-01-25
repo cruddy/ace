@@ -1,0 +1,19 @@
+// @import (reference) "../vendor/cruddy/assets/variables.less";
+
+@input-height-base: 24px;
+@padding-base-vertical: 4px;
+@nav-tabs-border-color: #eee;
+
+.markdown-editor {
+    > .hint {
+        float: right;
+        line-height: @input-height-base;
+    }
+
+    .tab-pane-preview {
+        overflow-y: auto;
+        margin-top: @padding-base-vertical;
+        padding-bottom: @padding-base-vertical;
+        border-bottom: 1px solid @nav-tabs-border-color;
+    }
+}

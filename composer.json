@@ -1,0 +1,22 @@
+{
+    "name": "cruddy/ace",
+
+    "description": "An ACE editor for Cruddy.",
+
+    "keywords": [ "cruddy", "ace", "markdown" ],
+
+    "authors": [
+        { "name": "Alexander Kalnoy", "email": "lazychaser@gmail.com" }
+    ],
+
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "4.2.*"
+    },
+
+    "autoload": {
+        "psr-4": { "Kalnoy\\Cruddy\\Ace\\": "src/" }
+    },
+
+    "minimum-stability": "stable"
+}
