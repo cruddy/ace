@@ -45,13 +45,11 @@ class Code extends BaseField {
      */
     public function toArray()
     {
-        $env = $this->entity->getEnvironment();
-
         return [
-            'height' => $this->get('height', $env->config('ace.height', 250)),
-            'theme' => $this->get('theme', $env->config('ace.theme', 'chrome')),
+            'height' => $this->get('height', config('ace.height', 250)),
+            'theme' => $this->get('theme', config('ace.theme', 'chrome')),
             'mode' => $this->get('mode'),
-            'wordwrap' => $this->get('wordwrap', $env->config('ace.wordwrap', true)),
+            'wordwrap' => $this->get('wordwrap', config('ace.wordwrap', true)),
 
         ] + parent::toArray();
     }
