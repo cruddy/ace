@@ -11,14 +11,13 @@
 
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "4.2.*"
+        "illuminate/support": "5.0.*",
+        "kalnoy/cruddy": "0.5.*@dev"
     },
 
     "autoload": {
         "psr-4": { "Kalnoy\\Cruddy\\Ace\\": "src/" }
     },
-
-    "minimum-stability": "stable",
 
     "extra": {
         "branch-alias": {

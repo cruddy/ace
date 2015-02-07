@@ -4,7 +4,7 @@ editor.
 ## Installation
 
 ```
-composer require cruddy/ace:~0.5.0
+composer require cruddy/ace:~0.5.*@dev
 ```
 
 Include a service provider:
@@ -13,16 +13,10 @@ Include a service provider:
 'Kalnoy\Cruddy\Ace\AceServiceProvider',
 ```
 
-Publish assets:
+Publish assets and config files:
 
 ```
-php artisan asset:publish cruddy/ace
-```
-
-Publish config:
-
-```
-php artisan config:publish cruddy/ace
+php artisan vendor:publish
 ```
 
 ## Usage

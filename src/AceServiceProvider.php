@@ -23,7 +23,7 @@ class AceServiceProvider extends ServiceProvider {
 
         $this->app->resolving('cruddy.assets', function (Assets $assets)
         {
-            $this->registerAssets($assets, 'packages/cruddy/ace');
+            $this->registerAssets($assets, 'cruddy/ace');
         });
 	}
 
@@ -44,7 +44,15 @@ class AceServiceProvider extends ServiceProvider {
      */
     public function boot()
     {
-        $this->app['config']->package('cruddy/ace', realpath(__DIR__.'/../config'), 'cruddy-ace');
+        $this->publishes([
+            __DIR__.'/../config/config.php' => config_path('ace.php'),
+
+        ], 'config');
+
+        $this->publishes([
+            __DIR__.'/../public' => public_path('cruddy/ace'),
+
+        ], 'assets');
     }
 
 }
