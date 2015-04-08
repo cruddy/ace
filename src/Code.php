@@ -21,14 +21,14 @@ use Kalnoy\Cruddy\Schema\Fields\BaseField;
 class Code extends BaseField {
 
     /**
-     * {@inheritdoc}
+     * The name of the JavaScript class that is used to render this field.
+     *
+     * @return string
      */
-    protected $class = 'Cruddy.Fields.Code';
-
-    /**
-     * {@inheritdoc}
-     */
-    protected $type = 'code';
+    protected function modelClass()
+    {
+        return 'Cruddy.Fields.Code';
+    }
 
     /**
      * {@inheritdoc}

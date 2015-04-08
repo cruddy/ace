@@ -162,6 +162,10 @@
       }
     };
 
+    Code.prototype.getType = function() {
+      return "code";
+    };
+
     return Code;
 
   })(Cruddy.Fields.Base);
@@ -188,6 +192,10 @@
       } else {
         return NOT_AVAILABLE;
       }
+    };
+
+    Markdown.prototype.getType = function() {
+      return "markdown";
     };
 
     return Markdown;

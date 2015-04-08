@@ -10,13 +10,11 @@ namespace Kalnoy\Cruddy\Ace;
 class Markdown extends Code {
 
     /**
-     * {@inheritdoc}
+     * @return string
      */
-    protected $class = 'Cruddy.Fields.Markdown';
-
-    /**
-     * {@inheritdoc}
-     */
-    protected $type = 'markdown';
+    protected function modelClass()
+    {
+        return 'Cruddy.Fields.Markdown';
+    }
 
 }

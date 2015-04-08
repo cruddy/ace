@@ -10,3 +10,5 @@ class Cruddy.Fields.Code extends Cruddy.Fields.Base
             wordwrap: @attributes.wordwrap
 
     format: (value) -> if value then "<div class=\"limit-height\">#{ value }</div>" else NOT_AVAILABLE
+
+    getType: -> "code"

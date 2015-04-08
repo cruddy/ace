@@ -110,6 +110,8 @@ class Cruddy.Fields.Code extends Cruddy.Fields.Base
             wordwrap: @attributes.wordwrap
 
     format: (value) -> if value then "<div class=\"limit-height\">#{ value }</div>" else NOT_AVAILABLE
+
+    getType: -> "code"
 class Cruddy.Fields.Markdown extends Cruddy.Fields.Base
 
     createEditableInput: (model) -> new Cruddy.Inputs.Markdown
@@ -119,3 +121,5 @@ class Cruddy.Fields.Markdown extends Cruddy.Fields.Base
         theme: @attributes.theme
 
     format: (value) -> if value then "<div class=\"well limit-height\">#{ marked value }</div>" else NOT_AVAILABLE
+
+    getType: -> "markdown"
