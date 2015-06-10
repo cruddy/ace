@@ -52,7 +52,7 @@ class AceServiceProvider extends ServiceProvider {
         $this->publishes([
             __DIR__.'/../public' => public_path('cruddy/ace'),
 
-        ], 'assets');
+        ], 'public');
     }
 
 }
