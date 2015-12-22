@@ -6,26 +6,24 @@ use Illuminate\Support\ServiceProvider;
 use Kalnoy\Cruddy\Assets;
 use Kalnoy\Cruddy\Schema\Fields\Factory;
 
-class AceServiceProvider extends ServiceProvider {
-
-	/**
-	 * Register the service provider.
-	 *
-	 * @return void
-	 */
-	public function register()
-	{
-		$this->app->resolving('cruddy.fields', function (Factory $factory)
-        {
-            $factory->register('code', 'Kalnoy\Cruddy\Ace\Code');
-            $factory->register('markdown', 'Kalnoy\Cruddy\Ace\Markdown');
+class AceServiceProvider extends ServiceProvider
+{
+    /**
+     * Register the service provider.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        $this->app->resolving('cruddy.fields', function (Factory $factory) {
+            $factory->register('code', Code::class);
+            $factory->register('markdown', Markdown::class);
         });
 
-        $this->app->resolving('cruddy.assets', function (Assets $assets)
-        {
+        $this->app->resolving('cruddy.assets', function (Assets $assets) {
             $this->registerAssets($assets, 'cruddy/ace');
         });
-	}
+    }
 
     /**
      * Register assets.
@@ -44,15 +42,9 @@ class AceServiceProvider extends ServiceProvider {
      */
     public function boot()
     {
-        $this->publishes([
-            __DIR__.'/../config/config.php' => config_path('ace.php'),
+        $this->publishes([ __DIR__.'/../config/config.php' => config_path('ace.php') ], 'config');
 
-        ], 'config');
-
-        $this->publishes([
-            __DIR__.'/../public' => public_path('cruddy/ace'),
-
-        ], 'public');
+        $this->publishes([  __DIR__.'/../public' => public_path('cruddy/ace') ], 'public');
     }
 
 }

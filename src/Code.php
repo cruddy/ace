@@ -18,8 +18,8 @@ use Kalnoy\Cruddy\Schema\Fields\BaseField;
  *
  * @since 1.0.0
  */
-class Code extends BaseField {
-
+class Code extends BaseField
+{
     /**
      * The name of the JavaScript class that is used to render this field.
      *

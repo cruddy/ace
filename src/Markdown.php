@@ -7,8 +7,8 @@ namespace Kalnoy\Cruddy\Ace;
  *
  * @since 1.0.0
  */
-class Markdown extends Code {
-
+class Markdown extends Code
+{
     /**
      * @return string
      */
